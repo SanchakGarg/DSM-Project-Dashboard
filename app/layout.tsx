@@ -1,14 +1,21 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Inter } from "next/font/google";
 import Link from "next/link";
+import { Providers } from "@/components/Providers";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import "./globals.css";
 
-const geist = Geist({ subsets: ["latin"], variable: "--font-geist-sans" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: "Child Malnutrition in India — DSM 2026",
+  title: "Child Malnutrition in India",
   description:
     "Interactive dashboard exploring district-level child malnutrition patterns across India using NFHS-4 and NFHS-5 data.",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+  },
 };
 
 const navLinks = [
@@ -24,36 +31,39 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${geist.variable} h-full`}>
-      <body className="min-h-full flex flex-col bg-zinc-50 text-zinc-900 font-sans antialiased">
-        <header className="sticky top-0 z-40 border-b border-zinc-200 bg-white/90 backdrop-blur">
-          <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-            <Link
-              href="/"
-              className="text-sm font-semibold tracking-tight text-zinc-900"
-            >
-              Child Malnutrition India
-            </Link>
-            <nav className="flex gap-6">
-              {navLinks.map(({ href, label }) => (
-                <Link
-                  key={href}
-                  href={href}
-                  className="text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
-                >
-                  {label}
-                </Link>
-              ))}
-            </nav>
-          </div>
-        </header>
-        <main className="flex-1">{children}</main>
-        <footer className="border-t border-zinc-200 bg-white">
-          <div className="mx-auto max-w-6xl px-6 py-6 text-center text-xs text-zinc-400">
-            DSM Spring 2026 &mdash; Ashoka University &middot; Data: NFHS-4
-            &amp; NFHS-5, JJM, HMIS
-          </div>
-        </footer>
+    <html lang="en" className={inter.variable} suppressHydrationWarning>
+      <body className="min-h-full flex flex-col bg-background text-foreground font-sans antialiased">
+        <Providers>
+          <header className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur">
+            <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
+              <Link
+                href="/"
+                className="text-sm font-semibold tracking-tight text-foreground"
+              >
+                Child Malnutrition in India
+              </Link>
+              <nav className="flex items-center gap-6">
+                {navLinks.map(({ href, label }) => (
+                  <Link
+                    key={href}
+                    href={href}
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    {label}
+                  </Link>
+                ))}
+                <ThemeToggle />
+              </nav>
+            </div>
+          </header>
+          <main className="flex-1">{children}</main>
+          <footer className="border-t border-border bg-background">
+            <div className="mx-auto max-w-6xl px-6 py-6 text-center text-xs text-muted-foreground">
+              DSM Spring 2026 &mdash; Ashoka University &middot; Data: NFHS-4
+              &amp; NFHS-5, JJM, HMIS
+            </div>
+          </footer>
+        </Providers>
       </body>
     </html>
   );
