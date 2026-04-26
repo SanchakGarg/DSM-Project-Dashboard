@@ -1,0 +1,10 @@
+{
+  "n_districts": 704,
+  "mean_stunting": 33.5,
+  "mean_wasting": 18.6,
+  "mean_underweight": 29.6,
+  "mean_anaemia": 65.9,
+  "worst_district": "West Singhbhum, Jharkhand",
+  "r_squared": 0.523,
+  "top_predictor": "Women's Education (\u03b2 = \u22120.406)"
+}

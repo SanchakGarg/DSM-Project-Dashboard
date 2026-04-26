@@ -1,0 +1,34 @@
+[
+  {
+    "Unnamed: 0":"Cluster 1 - Low Burden (n=196)",
+    "z_malnutrition_index_pc1":-0.742,
+    "z_improved_sanitation_pct":0.875,
+    "z_women_10plus_schooling_pct":0.945,
+    "z_institutional_deliveries_pct":0.391,
+    "z_hjg_villages_reported_ratio":0.754
+  },
+  {
+    "Unnamed: 0":"Cluster 2 - NE Outlier (n=50)",
+    "z_malnutrition_index_pc1":-0.693,
+    "z_improved_sanitation_pct":0.713,
+    "z_women_10plus_schooling_pct":-0.333,
+    "z_institutional_deliveries_pct":-2.741,
+    "z_hjg_villages_reported_ratio":0.27
+  },
+  {
+    "Unnamed: 0":"Cluster 3 - High Burden (n=253)",
+    "z_malnutrition_index_pc1":-0.047,
+    "z_improved_sanitation_pct":-0.056,
+    "z_women_10plus_schooling_pct":-0.148,
+    "z_institutional_deliveries_pct":0.284,
+    "z_hjg_villages_reported_ratio":-0.778
+  },
+  {
+    "Unnamed: 0":"Cluster 4 - Very High Burden (n=182)",
+    "z_malnutrition_index_pc1":1.096,
+    "z_improved_sanitation_pct":-1.111,
+    "z_women_10plus_schooling_pct":-0.836,
+    "z_institutional_deliveries_pct":-0.081,
+    "z_hjg_villages_reported_ratio":0.222
+  }
+]
