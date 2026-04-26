@@ -386,8 +386,8 @@ export default function DashboardPage() {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <ResponsiveContainer width="100%" height={460}>
-            <ScatterChart margin={{ top: 10, right: 20, bottom: 30, left: 10 }}>
+          <ResponsiveContainer width="100%" height={480}>
+            <ScatterChart margin={{ top: 10, right: 20, bottom: 50, left: 10 }}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis
                 dataKey="pca1"
@@ -396,7 +396,7 @@ export default function DashboardPage() {
                 label={{
                   value: "PC1 — Malnutrition Burden →",
                   position: "insideBottom",
-                  offset: -14,
+                  offset: -30,
                   fontSize: 12,
                 }}
               />
@@ -443,7 +443,7 @@ export default function DashboardPage() {
                   fillOpacity={0.55}
                 />
               ))}
-              <Legend />
+              <Legend verticalAlign="top" height={36} />
             </ScatterChart>
           </ResponsiveContainer>
         </CardContent>
