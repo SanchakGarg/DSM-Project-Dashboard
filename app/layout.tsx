@@ -57,12 +57,6 @@ export default function RootLayout({
             </div>
           </header>
           <main className="flex-1">{children}</main>
-          <footer className="border-t border-border bg-background">
-            <div className="mx-auto max-w-6xl px-6 py-6 text-center text-xs text-muted-foreground">
-              DSM Spring 2026 &mdash; Ashoka University &middot; Data: NFHS-4
-              &amp; NFHS-5, JJM, HMIS
-            </div>
-          </footer>
         </Providers>
       </body>
     </html>

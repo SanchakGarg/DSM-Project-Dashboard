@@ -1,5 +1,4 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 
 const indicators = [
@@ -56,14 +55,7 @@ export default function BlogPage() {
     <article className="mx-auto max-w-3xl px-6 py-16">
       {/* Header */}
       <header className="space-y-4 mb-10">
-        <div className="flex items-center gap-2">
-          <Badge className="bg-violet-100 text-violet-700 dark:bg-violet-900/40 dark:text-violet-300">
-            Research Note
-          </Badge>
-          <span className="text-xs text-muted-foreground">
-            DSM Spring 2026
-          </span>
-        </div>
+        <span className="text-xs text-muted-foreground">DSM Spring 2026</span>
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight">
           Why Are So Many Children in India Still Malnourished?
         </h1>
@@ -158,9 +150,8 @@ export default function BlogPage() {
                   <th className="text-right text-xs font-semibold uppercase tracking-wider text-muted-foreground px-5 py-3">
                     District Average
                   </th>
-                  <th className="text-left text-xs font-semibold uppercase tracking-wider text-muted-foreground px-5 py-3 w-2/5">
-                    Visual
-                  </th>
+                  <th className="px-5 py-3 w-2/5" />
+
                 </tr>
               </thead>
               <tbody>
@@ -402,13 +393,7 @@ export default function BlogPage() {
         </p>
       </section>
 
-      {/* Footer */}
       <Separator className="my-12" />
-      <footer className="text-center space-y-2">
-        <p className="text-xs text-muted-foreground">
-          DSM Spring 2026 · Ashoka University
-        </p>
-      </footer>
     </article>
   );
 }
