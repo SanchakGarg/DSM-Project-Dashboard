@@ -3,10 +3,10 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 
 const indicators = [
-  { label: "Stunting",        value: 33.5, color: "#ef4444" },
-  { label: "Wasting",         value: 18.6, color: "#f97316" },
-  { label: "Underweight",     value: 29.6, color: "#f59e0b" },
-  { label: "Child Anaemia",   value: 66.0, color: "#dc2626" },
+  { label: "Stunting",      value: 33.5, color: "#ef4444" },
+  { label: "Wasting",       value: 18.6, color: "#f97316" },
+  { label: "Underweight",   value: 29.6, color: "#f59e0b" },
+  { label: "Child anaemia", value: 66.0, color: "#dc2626" },
 ];
 
 const districtTypes = [
@@ -16,7 +16,7 @@ const districtTypes = [
     color: "#22c55e",
     bg: "#dcfce7",
     description:
-      "Lower malnutrition, better sanitation, higher women's education, and stronger water access. Often found in Kerala, Tamil Nadu, Punjab, and parts of the Northeast.",
+      "These districts had lower malnutrition, better sanitation, higher women's education, and stronger water access.",
   },
   {
     n: 2,
@@ -24,7 +24,7 @@ const districtTypes = [
     color: "#3b82f6",
     bg: "#dbeafe",
     description:
-      "Relatively low malnutrition despite weaker formal healthcare indicators. May be linked to local diets, culture, or community practices.",
+      "These districts had relatively low malnutrition despite weaker formal healthcare indicators. This may be linked to local diets, culture, or community practices.",
   },
   {
     n: 3,
@@ -32,7 +32,7 @@ const districtTypes = [
     color: "#f59e0b",
     bg: "#fef3c7",
     description:
-      "Moderate disadvantages and lower water coverage. They formed the largest group in our analysis.",
+      "These districts had moderate disadvantages and lower water coverage. They formed the largest group.",
   },
   {
     n: 4,
@@ -40,8 +40,15 @@ const districtTypes = [
     color: "#ef4444",
     bg: "#fee2e2",
     description:
-      "Multiple problems at the same time: high malnutrition, low sanitation, and low women's education. These districts may need the most urgent attention.",
+      "These districts faced multiple problems at the same time: high malnutrition, low sanitation, and low women's education. These are the districts that may need the most urgent attention.",
   },
+];
+
+const policyPoints = [
+  "Sanitation must remain a priority. Toilets, clean surroundings, and safe waste disposal can protect children from infections that damage growth.",
+  "Girls' and women's education should be seen as a nutrition policy too.",
+  "Nutrition programs need to focus more strongly on anaemia and micronutrients.",
+  "District-level planning is essential. India is too diverse for one size fits all solutions. Policies should identify what each district lacks most and respond accordingly.",
 ];
 
 export default function BlogPage() {
@@ -54,43 +61,44 @@ export default function BlogPage() {
             Research Note
           </Badge>
           <span className="text-xs text-muted-foreground">
-            DSM Spring 2026 · 8 min read
+            DSM Spring 2026
           </span>
         </div>
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight">
           Why Are So Many Children in India Still Malnourished?
         </h1>
-        <p className="text-lg text-muted-foreground leading-relaxed">
-          Despite India&apos;s economic rise, one in three children remains
-          stunted. We dug into district-level data from NFHS-5, NFHS-4, HMIS,
-          and the Jal Jeevan Mission to understand why.
-        </p>
       </header>
 
       <Separator className="mb-10" />
 
       {/* Intro */}
-      <section className="space-y-5 prose-base">
+      <section className="space-y-5">
         <p className="text-base leading-7 text-foreground/90">
-          Imagine two children growing up in two different districts of India.
-          Both of them live in a country that is building highways, expanding
-          digital services, launching satellites, and becoming one of the
-          world&apos;s fastest-growing economies. But their everyday lives may
-          look completely different. One child may have access to clean
-          drinking water, a toilet at home, good schooling, and health
-          services. The other one may grow up in a place with unsafe water,
-          poor sanitation, limited food, and weak healthcare.
+          I want you to imagine two children growing up in two different
+          districts of India.
+        </p>
+        <p className="text-base leading-7 text-foreground/90">
+          While both of them may live in a country that is building highways,
+          expanding digital services, launching satellites and even becoming
+          one of the world&apos;s fastest-growing economies. But their everyday
+          lives may look completely different. One child may have access to
+          clean drinking water, a toilet at home, good schooling and health
+          services. However, the other one may grow up in a place with unsafe
+          water, poor sanitation, limited food, and weak healthcare.
         </p>
         <p className="text-base leading-7 text-foreground/90">
           This difference can shape something as basic as whether a child grows
-          properly. But how much difference are we talking about? This is what
-          we set out to find through our final project for the Data Science and
-          Management course. Despite major economic progress, many children are
-          still stunted, underweight, wasted, or anaemic. This contradiction is
-          often called the <em>South Asian Enigma</em>. Instead of just asking
+          properly.
+        </p>
+        <p className="text-base leading-7 text-foreground/90">
+          But much difference are we talking about? This is what we set out to
+          find through our final project of teh Data Science and Management
+          course. Despite major economic progress, many children are still
+          stunted, underweight, wasted, or anaemic. This contradiction is often
+          called the &ldquo;South Asian Enigma.&rdquo; Instead of just asking
           which states are doing better or worse, we asked a more nuanced
-          question: <strong>what explains why one district has much higher
-          child malnutrition than another?</strong>
+          question: what explains why one district has much higher child
+          malnutrition than another?
         </p>
         <p className="text-base leading-7 text-foreground/90">
           To answer this, we studied district-level data from sources such as
@@ -118,21 +126,24 @@ export default function BlogPage() {
           <li>Does healthcare access matter?</li>
         </ol>
         <p className="text-base leading-7 text-foreground/90">
-          We also included <strong>women&apos;s education</strong> as an
-          important background factor because educated mothers are often better
-          able to access health services, understand nutrition, and make
-          informed household decisions.
+          We also included women&apos;s education as an important background
+          factor because educated mothers are often better able to access
+          health services, understand nutrition, and make informed household
+          decisions.
         </p>
       </section>
 
-      {/* What the Data Showed — with the indicator table */}
+      {/* What the Data Showed */}
       <section className="mt-12 space-y-5">
         <h2 className="text-2xl font-semibold tracking-tight">
           What the Data Showed
         </h2>
         <p className="text-base leading-7 text-foreground/90">
           The numbers show that child malnutrition is still a major problem in
-          many Indian districts. Across districts, the average levels were:
+          many Indian districts.
+        </p>
+        <p className="text-base leading-7 text-foreground/90">
+          Across districts, the average levels were:
         </p>
 
         {/* Beautiful table */}
@@ -164,7 +175,9 @@ export default function BlogPage() {
                       {row.label}
                     </td>
                     <td className="px-5 py-4 text-right text-sm font-mono font-semibold tabular-nums">
-                      {row.value.toFixed(1)}%
+                      {row.value % 1 === 0
+                        ? `${row.value.toFixed(0)}%`
+                        : `${row.value.toFixed(1)}%`}
                     </td>
                     <td className="px-5 py-4">
                       <div className="h-2 rounded-full bg-muted overflow-hidden">
@@ -189,17 +202,13 @@ export default function BlogPage() {
           children are too short for their age, too thin for their height,
           underweight, or anaemic.
         </p>
-
-        <blockquote className="border-l-4 border-red-500 bg-red-50 dark:bg-red-950/30 px-5 py-4 rounded-r-md my-6">
-          <p className="text-sm leading-relaxed text-foreground/90">
-            One especially worrying result was{" "}
-            <strong>child anaemia</strong>. While stunting, wasting, and
-            underweight improved slightly between NFHS-4 and NFHS-5, anaemia
-            became <em>worse</em> on average. Only about one-third of districts
-            showed improvement. This suggests that micronutrient deficiencies
-            still remain a serious challenge.
-          </p>
-        </blockquote>
+        <p className="text-base leading-7 text-foreground/90">
+          One especially worrying result was child anaemia. While stunting,
+          wasting, and underweight improved slightly between NFHS-4 and NFHS-5,
+          anaemia became worse on average. Only about one-third of districts
+          showed improvement in anaemia. This suggests that micronutrient
+          deficiencies still remain a serious challenge.
+        </p>
       </section>
 
       {/* Malnutrition Is Not Spread Evenly */}
@@ -209,12 +218,15 @@ export default function BlogPage() {
         </h2>
         <p className="text-base leading-7 text-foreground/90">
           One of the strongest takeaways from our project is that malnutrition
-          is not evenly distributed across India. Some districts have much
-          higher burdens than others. High-burden districts were concentrated
-          in states such as <strong>Jharkhand, Gujarat, Bihar, Maharashtra,
-          and Uttar Pradesh</strong>. Districts such as West Singhbhum
-          (Jharkhand), Panch Mahals and Dohad (Gujarat), and Nandurbar
-          (Maharashtra) appeared among the highest-burden areas.
+          is not evenly distributed across India.
+        </p>
+        <p className="text-base leading-7 text-foreground/90">
+          Some districts have much higher burdens than others. The report found
+          that high-burden districts were concentrated in states such as
+          Jharkhand, Gujarat, Bihar, Maharashtra, and Uttar Pradesh. Districts
+          such as West Singhbhum in Jharkhand, Panch Mahals and Dohad in
+          Gujarat, and Nandurbar in Maharashtra appeared among the
+          highest-burden areas.
         </p>
         <p className="text-base leading-7 text-foreground/90">
           On the other hand, districts in states such as Kerala, Punjab,
@@ -228,34 +240,37 @@ export default function BlogPage() {
         </p>
       </section>
 
-      {/* Education and Sanitation */}
+      {/* Education and Sanitation Matter Most */}
       <section className="mt-12 space-y-5">
         <h2 className="text-2xl font-semibold tracking-tight">
           Education and Sanitation Matter Most
         </h2>
         <p className="text-base leading-7 text-foreground/90">
           The project compared several possible explanations for malnutrition.
-          The clearest finding was that <strong>women&apos;s education and
-          sanitation were the strongest predictors</strong> of lower
-          malnutrition.
+          The clearest finding was that women&apos;s education and sanitation
+          were the strongest predictors of lower malnutrition.
         </p>
         <p className="text-base leading-7 text-foreground/90">
           Districts where more women had 10 or more years of schooling
-          generally had lower child malnutrition. Our hypothesis is that
-          education improves health awareness, nutrition knowledge, hygiene
-          practices, and the ability to use government services.
+          generally had lower child malnutrition. This makes sense. Our
+          hypothesis is that education can improve health awareness, nutrition
+          knowledge, hygiene practices, and the ability to use government
+          services.
         </p>
         <p className="text-base leading-7 text-foreground/90">
-          We also noticed that districts with better sanitation coverage tended
-          to have lower malnutrition. This is important because malnutrition is
-          not only about how much food a child eats. If a child is repeatedly
-          exposed to infections because of poor sanitation, their body may not
-          absorb nutrients properly. <em>A child&apos;s growth depends not
-          only on food, but also on the environment around them.</em>
+          One more thing we noticed is that districts with better sanitation
+          coverage tended to have lower malnutrition. This is important because
+          malnutrition is not only about how much food a child eats. If a child
+          is repeatedly exposed to infections because of poor sanitation, their
+          body may not absorb nutrients properly.
+        </p>
+        <p className="text-base leading-7 text-foreground/90">
+          In other words, a child&apos;s growth depends not only on food, but
+          also on the environment around them.
         </p>
       </section>
 
-      {/* Agriculture & Healthcare */}
+      {/* What About Agriculture & Healthcare? */}
       <section className="mt-12 space-y-5">
         <h2 className="text-2xl font-semibold tracking-tight">
           What About Agriculture &amp; Healthcare?
@@ -263,10 +278,9 @@ export default function BlogPage() {
         <p className="text-base leading-7 text-foreground/90">
           At first, agricultural productivity appeared to matter. Districts
           with better crop yields tended to have lower malnutrition in simple
-          comparisons. But when agriculture was studied{" "}
-          <em>together with</em> sanitation, education, and healthcare, its
-          effect became weaker. This suggests that simply producing more food
-          may not be enough.
+          comparisons. But when agriculture was studied together with
+          sanitation, education, and healthcare, its effect became weaker. This
+          suggests that simply producing more food may not be enough.
         </p>
         <p className="text-base leading-7 text-foreground/90">
           A district can grow more crops, but children may still be
@@ -276,15 +290,18 @@ export default function BlogPage() {
           food.
         </p>
         <p className="text-base leading-7 text-foreground/90">
-          We also looked at <strong>institutional delivery rates</strong> as a
-          healthcare indicator. Surprisingly, this did not show a simple
-          relationship with lower malnutrition. This does not mean healthcare
-          is unimportant. Instead it suggests that the chosen healthcare
-          indicator may not fully capture the kind of care that affects
-          nutrition. Child nutrition depends on iron supplementation, growth
-          monitoring, immunisation, counselling, treatment of infections, and
-          follow-up care — institutional delivery alone may not tell us
-          whether children are receiving these services after birth.
+          We also looked at institutional delivery rates as a healthcare
+          indicator. Surprisingly, this did not show a simple relationship with
+          lower malnutrition. This does not mean healthcare is unimportant.
+          Instead it suggests that the chosen healthcare indicator may not
+          fully capture the kind of care that affects nutrition.
+        </p>
+        <p className="text-base leading-7 text-foreground/90">
+          For example, child nutrition depends on things like iron
+          supplementation, growth monitoring, immunisation, counselling,
+          treatment of infections, and follow-up care. Institutional delivery
+          alone may not tell us whether children are receiving these services
+          after birth.
         </p>
       </section>
 
@@ -324,20 +341,20 @@ export default function BlogPage() {
         </div>
 
         <p className="text-base leading-7 text-foreground/90 mt-6">
-          This grouping is useful because <strong>not every district needs the
-          same solution</strong>. A district with low sanitation needs a
-          different strategy from a district where anaemia is the main concern.
+          This grouping is useful because not every district needs the same
+          solution. A district with low sanitation needs a different strategy
+          from a district where anaemia is the main concern.
         </p>
       </section>
 
-      {/* Policy Implications */}
+      {/* What This Means for Policy */}
       <section className="mt-12 space-y-5">
         <h2 className="text-2xl font-semibold tracking-tight">
           What This Means for Policy
         </h2>
         <p className="text-base leading-7 text-foreground/90">
-          The main lesson is simple:{" "}
-          <strong>child malnutrition cannot be solved by one program alone</strong>.
+          The main lesson is simple: child malnutrition cannot be solved by one
+          program alone.
         </p>
         <p className="text-base leading-7 text-foreground/90">
           While improving food supply is important, it&apos;s not enough.
@@ -346,35 +363,15 @@ export default function BlogPage() {
           integrated approach.
         </p>
         <ul className="space-y-3 mt-4">
-          {[
-            {
-              title: "Sanitation must remain a priority",
-              body: "Toilets, clean surroundings, and safe waste disposal can protect children from infections that damage growth.",
-            },
-            {
-              title: "Girls' and women's education is nutrition policy",
-              body: "Every additional year of schooling for women translates into measurable gains in child health.",
-            },
-            {
-              title: "Anaemia and micronutrients need focused attention",
-              body: "Two-thirds of districts saw worsening anaemia between NFHS-4 and NFHS-5 — this needs targeted iron and dietary interventions.",
-            },
-            {
-              title: "District-level planning is essential",
-              body: "India is too diverse for one-size-fits-all solutions. Policies should identify what each district lacks most and respond accordingly.",
-            },
-          ].map((item) => (
+          {policyPoints.map((point, i) => (
             <li
-              key={item.title}
+              key={i}
               className="flex gap-3 items-start rounded-lg border border-border p-4"
             >
-              <span className="mt-1 inline-block w-1.5 h-1.5 rounded-full bg-foreground shrink-0" />
-              <div className="space-y-1">
-                <p className="text-sm font-semibold">{item.title}</p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {item.body}
-                </p>
-              </div>
+              <span className="mt-2 inline-block w-1.5 h-1.5 rounded-full bg-foreground shrink-0" />
+              <p className="text-sm text-foreground/90 leading-relaxed">
+                {point}
+              </p>
             </li>
           ))}
         </ul>
@@ -385,15 +382,15 @@ export default function BlogPage() {
         <h2 className="text-2xl font-semibold tracking-tight">Conclusion</h2>
         <p className="text-base leading-7 text-foreground/90">
           A child&apos;s nutrition is like a house supported by many pillars.
-          Food, sanitation, healthcare, women&apos;s education, and clean
-          water are among those pillars. If one pillar is weak, the house
-          becomes unstable. If many pillars are weak at the same time,
-          children face a much higher risk of malnutrition.
+          Food, sanitation, healthcare, women&apos;s education and clear water
+          are among those pillars.
         </p>
         <p className="text-base leading-7 text-foreground/90">
-          Our analysis shows that among these pillars,{" "}
-          <strong>women&apos;s education and sanitation</strong> appear
-          especially important at the district level.
+          If one pillar is weak, the house becomes unstable. If many pillars
+          are weak at the same time, children face a much higher risk of
+          malnutrition. Our analysis shows that among these pillars,
+          women&apos;s education and sanitation appear especially important at
+          the district level.
         </p>
         <p className="text-base leading-7 text-foreground/90">
           Child malnutrition in India is not just a food problem. It is also a
@@ -408,10 +405,6 @@ export default function BlogPage() {
       {/* Footer */}
       <Separator className="my-12" />
       <footer className="text-center space-y-2">
-        <p className="text-xs text-muted-foreground">
-          Based on district-level analysis of NFHS-4, NFHS-5, HMIS, JJM, and
-          Agriculture Statistics
-        </p>
         <p className="text-xs text-muted-foreground">
           DSM Spring 2026 · Ashoka University
         </p>
