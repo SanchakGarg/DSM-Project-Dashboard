@@ -32,29 +32,29 @@
     ],
     "sources": [
       {
-        "name": "NFHS-4 & 5",
-        "url": "http://rchiips.org/nfhs",
-        "description": "National Family Health Surveys"
+        "name": "National Family Health Survey-5 : District",
+        "url": "https://ndap.niti.gov.in/dataset/6822",
+        "description": "Primary nutrition and household indicators for the district-level merge"
       },
       {
-        "name": "HMIS",
-        "url": "https://nrhm-mis.nic.in",
-        "description": "Health Management Information System"
+        "name": "National Family Health Survey-4 : District",
+        "url": "https://ndap.niti.gov.in/dataset/7034",
+        "description": "Historical baseline district indicators for comparison"
       },
       {
-        "name": "Jal Jeevan Mission",
-        "url": "https://ejalshakti.gov.in",
-        "description": "Rural water access monitoring"
+        "name": "Har Ghar Jal",
+        "url": "https://ndap.niti.gov.in/dataset/9310",
+        "description": "Jal Jeevan Mission water access monitoring"
       },
       {
-        "name": "Agriculture Statistics",
-        "url": "https://aps.dac.gov.in",
-        "description": "District-level crop data"
+        "name": "Land Use Statistics : Crop Production Statistics",
+        "url": "https://ndap.niti.gov.in/dataset/6820",
+        "description": "District-level crop production and yield statistics"
       },
       {
-        "name": "NDAP",
-        "url": "https://ndap.niti.gov.in",
-        "description": "National Data Analytics Platform (Primary aggregator)"
+        "name": "Health Management Information System (HMIS)",
+        "url": "https://ndap.niti.gov.in/dataset/6707",
+        "description": "Health system and delivery indicators at district level"
       }
     ]
   },

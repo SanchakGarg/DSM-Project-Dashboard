@@ -703,6 +703,52 @@ export default function DatabasePage() {
             </Card>
           </TabsContent>
         </Tabs>
+
+        <Card>
+          <CardHeader className="border-b">
+            <CardTitle className="flex items-center gap-2">
+              <ExternalLink className="size-4 text-muted-foreground" />
+              Source index
+            </CardTitle>
+            <CardDescription>
+              Direct links to the upstream datasets used in the merged database.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="pt-4">
+            <ol className="divide-y rounded-xl border bg-background">
+              {db.metadata.sources.map((source, index) => (
+                <li
+                  key={source.name}
+                  className="flex flex-col gap-3 p-4 md:flex-row md:items-start md:justify-between"
+                >
+                  <div className="flex items-start gap-4">
+                    <Badge variant="secondary" className="mt-0.5 shrink-0">
+                      {index + 1}
+                    </Badge>
+                    <div className="space-y-1">
+                      <p className="font-medium leading-tight">{source.name}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {source.description}
+                      </p>
+                      <p className="break-all text-xs text-muted-foreground">
+                        {source.url}
+                      </p>
+                    </div>
+                  </div>
+                  <a
+                    href={source.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+                  >
+                    Open dataset
+                    <ExternalLink className="size-4" />
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );
