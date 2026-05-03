@@ -269,7 +269,6 @@ export default function DatabasePage() {
           <TabsList variant="line" className="w-full justify-start">
             <TabsTrigger value="records">Records</TabsTrigger>
             <TabsTrigger value="schema">Schema</TabsTrigger>
-            <TabsTrigger value="sources">Sources</TabsTrigger>
           </TabsList>
 
           <TabsContent value="records" className="space-y-5">
@@ -601,7 +600,7 @@ export default function DatabasePage() {
                       </p>
                       <p>
                         Use the schema tab to inspect the underlying tables and
-                        the sources tab to open the external datasets.
+                        the source index below to open the external datasets.
                       </p>
                     </div>
                   </CardContent>
@@ -664,44 +663,6 @@ export default function DatabasePage() {
             </Card>
           </TabsContent>
 
-          <TabsContent value="sources" className="space-y-5">
-            <div className="grid gap-4 md:grid-cols-2">
-              {db.metadata.sources.map((source) => (
-                <Card key={source.name}>
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-base">{source.name}</CardTitle>
-                    <CardDescription>{source.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <ExternalLink className="size-4" />
-                      <span className="break-all">{source.url}</span>
-                    </div>
-                    <a
-                      href={source.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
-                    >
-                      Open source
-                      <ExternalLink className="size-4" />
-                    </a>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            <Card>
-              <CardContent className="space-y-3 pt-5">
-                <Badge variant="secondary">Provenance</Badge>
-                <p className="text-sm leading-relaxed text-muted-foreground">
-                  These sources feed the district merge that powers the analysis
-                  dataset, keeping the explorer tied to the upstream NDAP,
-                  NFHS, HMIS, JJM, and agriculture references.
-                </p>
-              </CardContent>
-            </Card>
-          </TabsContent>
         </Tabs>
 
         <Card>
