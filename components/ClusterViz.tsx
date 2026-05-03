@@ -16,18 +16,18 @@ import {
 } from "recharts";
 
 const CLUSTER_COLORS = ["#22c55e", "#3b82f6", "#f59e0b", "#ef4444"];
-const CLUSTER_LABELS = ["High Burden Type 2", "Low Burden Type 1", "High Burden Type 1", "Low Burden Type 2"];
+const CLUSTER_LABELS = ["Low Burden Type 2", "Low Burden Type 1", "High Burden Type 1", "High Burden Type 2"];
 
 const distributionData = [
-  { name: "High Burden Type 2", n: 196, color: CLUSTER_COLORS[0] },
+  { name: "Low Burden Type 2", n: 196, color: CLUSTER_COLORS[0] },
   { name: "Low Burden Type 1", n: 50, color: CLUSTER_COLORS[1] },
   { name: "High Burden Type 1", n: 253, color: CLUSTER_COLORS[2] },
-  { name: "Low Burden Type 2", n: 182, color: CLUSTER_COLORS[3] },
+  { name: "High Burden Type 2", n: 182, color: CLUSTER_COLORS[3] },
 ];
 
 const profileData = [
   {
-    cluster: "High Burden Type 2",
+    cluster: "Low Burden Type 2",
     "Malnutrition Index": -0.742,
     Sanitation: 0.875,
     "Women's Ed.": 0.945,
@@ -45,7 +45,7 @@ const profileData = [
     "Women's Ed.": -0.148,
   },
   {
-    cluster: "Low Burden Type 2",
+    cluster: "High Burden Type 2",
     "Malnutrition Index": 1.096,
     Sanitation: -1.111,
     "Women's Ed.": -0.836,
