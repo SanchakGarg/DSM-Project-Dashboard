@@ -73,10 +73,10 @@ const CLUSTER_COLORS: Record<number, string> = {
 };
 
 const CLUSTER_LABELS: Record<number, string> = {
-  0: "Low Burden",
-  1: "NE Outlier",
-  2: "High Burden",
-  3: "Very High Burden",
+  0: "Low Burden Type 2",
+  1: "Low Burden Type 1",
+  2: "High Burden Type 1",
+  3: "High Burden Type 2",
 };
 
 const outcomeOptions = [

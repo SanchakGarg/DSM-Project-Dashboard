@@ -45,7 +45,7 @@ const findings = [
   {
     title: "Four structurally distinct clusters emerge",
     description:
-      "K-means on 5 policy-relevant features separates a Low-Burden group (southern & western districts) from a Very High Burden group concentrated in tribal belts of Gujarat, Jharkhand, and Maharashtra.",
+      "K-means on 5 policy-relevant features separates a Low Burden Type 2 group (southern & western districts) from a High Burden Type 2 group concentrated in tribal belts of Gujarat, Jharkhand, and Maharashtra.",
     badge: "K = 4",
     badgeClass: "bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300",
   },
@@ -57,10 +57,10 @@ const findings = [
     badgeClass: "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300",
   },
   {
-    title: "North-East India is a structural outlier",
+    title: "Low Burden Type 1 represents a structural outlier",
     description:
       "High sanitation coverage but very low institutional deliveries (z ≈ −2.74) isolates NE districts into their own cluster despite moderate malnutrition — a pattern invisible in state-level aggregates.",
-    badge: "Cluster 2",
+    badge: "Low Burden Type 1",
     badgeClass: "bg-sky-100 text-sky-700 dark:bg-sky-900/40 dark:text-sky-300",
   },
 ];
@@ -90,6 +90,12 @@ export default function HomePage() {
             className="inline-flex items-center rounded-full bg-foreground px-5 py-2 text-sm font-medium text-background hover:opacity-80 transition-opacity"
           >
             Explore the Dashboard
+          </Link>
+          <Link
+            href="/database"
+            className="inline-flex items-center rounded-full bg-indigo-600 px-5 py-2 text-sm font-medium text-white hover:bg-indigo-700 transition-colors"
+          >
+            Database Explorer
           </Link>
           <Link
             href="/explorer"
