@@ -45,7 +45,7 @@ const findings = [
   {
     title: "Four structurally distinct clusters emerge",
     description:
-      "K-means on 5 policy-relevant features separates a Low Burden Type 2 group (southern & western districts) from a High Burden Type 2 group concentrated in tribal belts of Gujarat, Jharkhand, and Maharashtra.",
+      "K-means on 5 policy-relevant features separates a High Burden Type 2 group (southern & western districts) from a Low Burden Type 2 group concentrated in tribal belts of Gujarat, Jharkhand, and Maharashtra.",
     badge: "K = 4",
     badgeClass: "bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300",
   },

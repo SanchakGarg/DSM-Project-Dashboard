@@ -11,7 +11,6 @@ import {
   ResponsiveContainer,
   ScatterChart,
   Scatter,
-  Cell,
   RadarChart,
   PolarGrid,
   PolarAngleAxis,
@@ -73,10 +72,10 @@ const CLUSTER_COLORS: Record<number, string> = {
 };
 
 const CLUSTER_LABELS: Record<number, string> = {
-  0: "Low Burden Type 2",
+  0: "High Burden Type 2",
   1: "Low Burden Type 1",
   2: "High Burden Type 1",
-  3: "High Burden Type 2",
+  3: "Low Burden Type 2",
 };
 
 const outcomeOptions = [
